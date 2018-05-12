@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog z devstyle</title>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="#" class="menu-icon"> <i class="fa fa-bars"></i> </a>
+        <ul class="menu">
+            <li><a href="/">Strona Główna</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Strona na zaliczenie projectu</h1>
+        <p>Programowanie to jest fun!</p>
+    </header>
+    <div id="content">
+        <section>
+            <article>
+                <header>
+                <h2>Pierwszy post</h2>
+                <p> 15.02.2018 by Kamila</p>
+                </header>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cum illo voluptas sunt? Minima, distinctio ex? Laboriosam facilis ipsum quaerat earum necessitatibus ipsa maxime numquam nobis quia, ipsam excepturi perspiciatis.</p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing eli
+            </article>
+        </section>
+        <aside>
+            <section id="choreo">
+                <header>
+                <h3>Choreografie</h3>
+            </header>
+                <ul>
+                    <li><a href="piosenka link">choreo1</a></li>
+                    <li><a href="piosenka link">choreo 2</a></li>
+                    <li><a href="piosenka link"> choreo 3</a></li>
+                    <li><a href="piosenka link"> choreo4</a></li>
+
+                </ul>
+            </section>
+        </aside>
+    </div>
+        <footer><p>Salsation&copy; is <b>NOW!</b></p></footer>
+        <div id="back-top">
+        <a href="#">&#8679;</a>
+      </div>
+    
+   <script> var button = document.getElementsByClassName("menu-icon")[0];
+    button.onclick =function(){
+       document.getElementsByClassName("menu")[0].classList.toggle("show");
+       return false;
+    }
+    /* wyłapanie scrolowania*/
+    document.addEventListener('scroll',toggleBackTop );
+    /* co sie ma zadziac po scrolowaniu*/
+function toggleBackTop(){
+    /* jezeli w pionie Y przescoluje sie 100px to strzalka ma sie pokazac*/
+    if(window.scrollY >= 100){
+        document.querySelector('#back-top').style.opacity='1';
+    } else {
+        /*jezeli nie to ma byc niewidoczna*/
+        document.querySelector('#back-top').style.opacity ='0';
+    
+     }
+}
+ document.querySelector('#back-top').addEventListner('click', scrollTop);
+ /*nasluchiwanie czy kliknieto w odnosnik*/
+ function scrollTop(event){
+     event.preventDefault();
+    var scrollInterval = setInterval(function(){
+if(window.scrollY != 0){
+    window.scrollBy(0,-50);
+} else {
+    clearInterval(scrollInterval);
+}
+
+}, 15);
+
+ }
+
+       </script> 
+</body>
+</html>
